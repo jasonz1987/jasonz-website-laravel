@@ -2,7 +2,7 @@
 @section('title')Jason.z - 一个技术爱好者@stop
 @section('content')
     <section class="bg-white dark:bg-gray-900">
-        <div class="py-8 px-4 mx-auto min-h-screen text-center lg:py-16 lg:px-12 container">
+        <div class="py-8 px-4 mx-auto text-center lg:py-16 lg:px-12 container">
             <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">你好，世界!</h1>
             <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">与你一同探索技术世界.</p>
 {{--            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">--}}

@@ -1,5 +1,7 @@
 @extends('layouts.default')
-@section('title')关于我 - Jason.z@stop
+@section('title')
+    关于我 - Jason.z
+@stop
 @section('content')
     <section class="relative md:py-32 py-24 min-h-screen">
         <div class="container mx-auto">
