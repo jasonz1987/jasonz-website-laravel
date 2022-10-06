@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('title')->comment('文章标题');
             $table->string('image')->comment('文章图片');
             $table->string('slug')->comment('文章SLUG');
-            $table->longText('content')->commnet('文章内容');
+            $table->longText('content')->comment('文章内容');
             $table->unsignedInteger('category_id')->nullable()->comment('分类ID');
             $table->timestamps();
         });
