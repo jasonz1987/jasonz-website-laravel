@@ -22,7 +22,7 @@ class PostController extends AdminController
         return Grid::make(new Post(), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('title', '标题');
-            $grid->column('image', '图片');
+            $grid->column('image', '图片')->image();
             $grid->column('created_at', '创建日期');
             $grid->filter(function (Grid\Filter $filter) {
                 $filter->equal('id');
