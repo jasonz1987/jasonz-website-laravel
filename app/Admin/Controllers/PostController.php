@@ -57,7 +57,7 @@ class PostController extends AdminController
     {
         return Form::make(new Post(), function (Form $form) {
             $form->text('title', '文章标题')->required();
-            $form->image('image', '文章配图')->uniqueName()->removable()->retainable();
+            $form->image('image', '文章配图')->autoUpload()->uniqueName()->removable(false)->retainable();
             $form->text('slug', 'SLUG')->required();
             $form->editor('content', '文章内容')->required();
         });
