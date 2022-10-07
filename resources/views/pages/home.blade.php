@@ -3,7 +3,7 @@
 @section('content')
     <section class="bg-white dark:bg-gray-900">
         <div class="py-8 px-4 mx-auto text-center lg:py-16 lg:px-12 container">
-            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">你好，世界!</h1>
+            <h1 class="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900 md:text-5xl lg:text-6xl dark:text-white">你好，朋友!</h1>
             <p class="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">与你一同探索技术世界.</p>
 {{--            <div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">--}}
 {{--                <a href="#" class="inline-flex justify-center items-center py-3 px-5 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900">--}}
@@ -17,7 +17,7 @@
 {{--            </div>--}}
 
             <div class="flex justify-center mt-10">
-                <img class="object-cover w-full h-fit rounded-xl lg:w-4/5" src="https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1639&q=80" />
+                <img class="object-cover w-100 h-fit rounded-xl lg:w-4/5" src="https://images.unsplash.com/photo-1589149098258-3e9102cd63d3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1639&q=80" />
             </div>
         </div>
     </section>

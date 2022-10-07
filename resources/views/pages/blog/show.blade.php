@@ -1,5 +1,7 @@
 @extends('layouts.default')
-@section('title'){{$post->title}} - Jason.z@stop
+@section('title')
+    {{$post->title}} - Jason.z
+@stop
 @section('content')
     <section class=" pb-16 pt-4 lg:pb-16 bg-white dark:bg-gray-900">
         <div class="flex justify-between px-4 mx-auto container max-w-4xl">
