@@ -10,15 +10,18 @@ class BlogController extends Controller
     public function index(Request $request) {
         $page = $request->input('page');
 
-        $posts = Post::paginate(1, ['*'], 'page',  $page);
+        $posts = Post::paginate(12, ['*'], 'page',  $page);
 
         return view('pages.blog.index', compact('posts'));
     }
 
-    public function show(Request $request) {
-        $slug = $request->input('');
+    public function show($slug, Request $request) {
 
-        $post = Post::find(1);
+        $post = Post::where('slug', '=', $slug)->first();
+
+        if (!$post) {
+            abort(404);
+        }
 
         return view('pages.blog.show', compact('post'));
     }
