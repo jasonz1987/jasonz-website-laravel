@@ -42,7 +42,7 @@ Editor::resolving(function (Form\Field\Editor $editor) {
                         {text: 'Java', value: 'java'},
                         {text: 'C', value: 'c'},
                         {text: 'C#', value: 'csharp'},
-                        {text: 'C++', value: 'cpp'}
+                        {text: 'C++', value: 'cpp'},
                         {text: 'BASH', value: 'bash'}
                     ],
                 });
