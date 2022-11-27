@@ -24,3 +24,30 @@ use Dcat\Admin\Show;
  * Admin::js('/packages/prettydocs/js/main.js');
  *
  */
+use Dcat\Admin\Form\Field\Editor;
+
+Editor::resolving(function (Form\Field\Editor $editor) {
+    $editor->options([
+        'setup' => JavaScript::make(
+            <<<JS
+                    function (editor) {
+                        tinymce.init({
+                             codesample_languages: [
+                                {text: 'HTML/XML', value: 'markup'},
+                                {text: 'JavaScript', value: 'javascript'},
+                                {text: 'CSS', value: 'css'},
+                                {text: 'PHP', value: 'php'},
+                                {text: 'Ruby', value: 'ruby'},
+                                {text: 'Python', value: 'python'},
+                                {text: 'Java', value: 'java'},
+                                {text: 'C', value: 'c'},
+                                {text: 'C#', value: 'csharp'},
+                                {text: 'C++', value: 'cpp'}
+                                {text: 'BASH', value: 'bash'}
+                            ],
+                        });
+                    }
+                    JS
+        ),
+    ]);
+});
