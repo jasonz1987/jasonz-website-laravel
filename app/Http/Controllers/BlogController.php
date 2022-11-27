@@ -10,7 +10,7 @@ class BlogController extends Controller
     public function index(Request $request) {
         $page = $request->input('page');
 
-        $posts = Post::paginate(12, ['*'], 'page',  $page);
+        $posts = Post::orderBy('created_at', 'desc')->paginate(12, ['*'], 'page',  $page);
 
         return view('pages.blog.index', compact('posts'));
     }

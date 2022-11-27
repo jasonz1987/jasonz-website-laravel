@@ -1,29 +1,29 @@
 require('./bootstrap');
 
 
-try {
-    function changeTheme(e){
-        e.preventDefault()
-        const htmlTag = document.getElementsByTagName("html")[0]
-
-        if (htmlTag.className.includes("dark")) {
-            htmlTag.className = 'light';
-            localStorage.theme = 'light';
-        } else {
-            htmlTag.className = 'dark';
-            localStorage.theme = 'dark';
-        }
-    }
-
-    const switcher = document.getElementById("theme-mode");
-    switcher?.addEventListener("click" ,changeTheme );
-
-    const chk = document.getElementById('chk');
-
-    chk.addEventListener('change',changeTheme);
-} catch (err) {
-
-}
+// try {
+//     function changeTheme(e){
+//         e.preventDefault()
+//         const htmlTag = document.getElementsByTagName("html")[0]
+//
+//         if (htmlTag.className.includes("dark")) {
+//             htmlTag.className = 'light';
+//             localStorage.theme = 'light';
+//         } else {
+//             htmlTag.className = 'dark';
+//             localStorage.theme = 'dark';
+//         }
+//     }
+//
+//     const switcher = document.getElementById("theme-mode");
+//     switcher?.addEventListener("click" ,changeTheme );
+//
+//     const chk = document.getElementById('chk');
+//
+//     chk.addEventListener('change',changeTheme);
+// } catch (err) {
+//
+// }
 
 // Get the button
 let backBtn = document.getElementById("back-to-top-btn");
@@ -60,11 +60,11 @@ function backToTop() {
 $(document).ready(function () {
     // 暗黑模式
 
-    if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
-    } else {
-        document.documentElement.classList.remove('dark')
-    }
+    // if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    //     document.documentElement.classList.add('dark')
+    // } else {
+    //     document.documentElement.classList.remove('dark')
+    // }
 
     Prism.plugins.toolbar.registerButton('copy-to-clipboard', function (env) {
         var linkCopy = document.createElement('button');
