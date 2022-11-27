@@ -28,7 +28,7 @@ use Dcat\Admin\Form\Field\Editor;
 
 Editor::resolving(function (Form\Field\Editor $editor) {
     $editor->options([
-        'setup' => JavaScript::make(
+        'setup' => \Dcat\Admin\Support\JavaScript::make(
             <<<JS
                     function (editor) {
                         tinymce.init({
