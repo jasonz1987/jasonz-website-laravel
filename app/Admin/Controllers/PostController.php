@@ -19,7 +19,7 @@ class PostController extends AdminController
      */
     protected function grid()
     {
-        return Grid::make(new Post(), function (Grid $grid) {
+        return Grid::make(Post::orderBy('id', 'desc'), function (Grid $grid) {
             $grid->column('id')->sortable();
             $grid->column('title', '标题');
             $grid->column('image', '图片')->image('', 100,50);

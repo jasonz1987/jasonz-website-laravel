@@ -12,7 +12,7 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
                 @foreach($posts as $post)
                 <div class="blog relative rounded-md shadow dark:shadow-gray-800 overflow-hidden">
-                    <img src="{{ 'storage/' . $post->image }}" alt="">
+                    <img src="{{ 'storage/' . $post->image }}" alt="" class="max-h-[400px]">
                     <div class="content p-6">
                         <a href="{{ url('blog/' . $post->slug ) }}" class="title h5 text-lg font-medium hover:text-blue-600 duration-500 ease-in-out">{{ $post->title }}</a>
                         <p class="text-slate-400 mt-3">{{ mb_substr(strip_tags($post->content), 0,20) }}</p>
