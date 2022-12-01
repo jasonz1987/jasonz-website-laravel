@@ -11,3 +11,6 @@
 <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.3/dist/flowbite.min.css" />
 <link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism.min.css">
 @yield('css')
+<style>
+
+</style>
