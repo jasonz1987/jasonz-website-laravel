@@ -44,14 +44,15 @@
 </script>
 
 
-<!-- Google tag (gtag.js) -->
-{{--<script async src="https://www.googletagmanager.com/gtag/js?id=G-PV0F0T5S6J"></script>--}}
-{{--<script>--}}
-{{--    window.dataLayer = window.dataLayer || [];--}}
-{{--    function gtag(){dataLayer.push(arguments);}--}}
-{{--    gtag('js', new Date());--}}
+<script>
+    var _hmt = _hmt || [];
+    (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?9df80c64395dc22f25b7879090db0805";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
 
-{{--    gtag('config', 'G-PV0F0T5S6J');--}}
-{{--</script>--}}
 </body>
 </html>
