@@ -67,8 +67,14 @@ class MidjourneyHelperController extends Controller
         $ret = curl_exec($curl);
         curl_close($curl);
 
+
         $ret = json_decode($ret, true);
 
-        return $ret;
+        // return $ret;
+
+        return [
+            'success'   => true,
+            'uses'  => 0,
+        ];
     }
 }
