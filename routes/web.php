@@ -26,5 +26,5 @@ Route::get('/about', function () {
 Route::get('blog', [BlogController::class, 'index']);
 Route::get('blog/{slug}', [BlogController::class, 'show']);
 Route::get('midjourneyhelper', [MidjourneyHelperController::class, 'index']);
-Route::post('midjourneyhelper/activate', [MidjourneyHelperController::class, 'activate']);
+Route::any('midjourneyhelper/activate', [MidjourneyHelperController::class, 'activate']);
 

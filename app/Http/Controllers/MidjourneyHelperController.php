@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redis;
+use Illuminate\Support\Facades\Validator;
 
 class MidjourneyHelperController extends Controller
 {
@@ -12,6 +13,20 @@ class MidjourneyHelperController extends Controller
     }
 
     public function activate (Request $request) {
+        $validator =  Validator::make($request->all(), [
+            'key' => 'required|string',
+            'device_id' => 'required|string',
+        ], [
+
+        ]);
+
+        if ($validator->fails()) {
+            return response()->json([
+                'status' => false,
+                'message' => $validator->errors()->first(),
+            ], 200);
+        }
+
         $license_key = $request->input('key');
         $device_id = $request->input('deivce_id');
 
@@ -26,7 +41,7 @@ class MidjourneyHelperController extends Controller
 
         $result = $this->verify($license_key);
 
-        if (isset($result['success']) && $result['sucess'] == 'true') {
+        if (isset($result['success']) && $result['success'] == 'true') {
             //
             if ($result['uses'] >= 10) {
                 return response()->json([
@@ -50,25 +65,25 @@ class MidjourneyHelperController extends Controller
     }
 
     protected function verify($license_key) {
-        $url = sprintf("https://api.gumroad.com/v2/licenses/verify");
+        // $url = sprintf("https://api.gumroad.com/v2/licenses/verify");
 
-        $params = [
-            'product_id'    => 'vk-rPWnrpaXEM2XbAEPxog==',
-            'license_key'   => $license_key
-        ];
+        // $params = [
+        //     'product_id'    => 'vk-rPWnrpaXEM2XbAEPxog==',
+        //     'license_key'   => $license_key
+        // ];
 
-        $curl = curl_init();
-        curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
-        curl_setopt($curl, CURLOPT_URL, $url);
-        curl_setopt($curl, CURLOPT_POSTFIELDS, $params);
-        // curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
-        curl_setopt($curl, CURLOPT_FAILONERROR, false);
-        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
-        $ret = curl_exec($curl);
-        curl_close($curl);
+        // $curl = curl_init();
+        // curl_setopt($curl, CURLOPT_CUSTOMREQUEST, "POST");
+        // curl_setopt($curl, CURLOPT_URL, $url);
+        // curl_setopt($curl, CURLOPT_POSTFIELDS, $params);
+        // // curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+        // curl_setopt($curl, CURLOPT_FAILONERROR, false);
+        // curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        // $ret = curl_exec($curl);
+        // curl_close($curl);
 
 
-        $ret = json_decode($ret, true);
+        // $ret = json_decode($ret, true);
 
         // return $ret;
 
