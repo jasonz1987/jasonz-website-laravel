@@ -12,11 +12,11 @@
 <link rel="stylesheet" href="https://unpkg.com/prismjs@1.29.0/themes/prism.min.css">
 @yield('css')
 <style>
-    html {
+    /* html {
         -webkit-filter : grayscale(100%);
         -moz-filter: grayscale(100%);
         -o-filter: grayscale(100%);
         filter: grayscale(100%);
         filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
-    }
+    } */
 </style>
